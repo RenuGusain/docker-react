@@ -10,6 +10,8 @@ COPY . .
 RUN npm run build
 
 #Run pahse
+#EXPOSE 80 #its do nth at lcoal env
 
 FROM nginx
+EXPOSE 80 
 COPY --from=builder  /home/node/app/build usr/share/nginx/html
