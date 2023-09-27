@@ -8,7 +8,7 @@ services:
       - "3000:3000"
     volumes: 
       - /home/node/app/node_modules #indicates docker need not to map /app/node_modules to any local location
-      - /home/renu/frontend:/home/node/app #indicates docker to tamp current working directoru(.) to /app directory of container
+      - .:/home/node/app #indicates docker to tamp current working directoru(.) to /app directory of container
   tests:
     build:
       context: .
